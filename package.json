@@ -30,6 +30,7 @@
   },
   "scripts": {
     "test": "webpack",
-    "start": "concurrently \"node index.js\" \"webpack\" \"node-sass -w src/css -o public/css/ --output-style compressed\" \"browser-sync start --proxy 'localhost:5000' --files 'public' 'views'\" "
+    "start": "concurrently \"node index.js\" \"webpack\" \"node-sass -w src/css -o public/css/ --output-style compressed\" \"browser-sync start --proxy 'localhost:5000' --files 'public' 'views'\" ",
+    "remote": "git push -u origin master"
   }
 }
