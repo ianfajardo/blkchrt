@@ -1,0 +1,47 @@
+<div id="app" class="chartList">
+
+  {{> nav }}
+
+  <div id="loadingBarContainer" v-show="loading">
+    <div id="loadingBar"></div>
+  </div>
+
+  <div class="container" v-show="loaded">
+
+    <div class="columns coinList" v-for="item in items">
+
+      <div class="column is-2 has-text-left">
+        <div>
+          <div class="heading">\{{item.symbol}}</div>
+          <div class="title">\{{item.name}}</div>
+        </div>
+      </div>
+      <div class="column is-2 has-text-centered">
+        <div>
+          <p class="heading">Price (USD)</p>
+          <p class="title coinPrice">$\{{ formatCurrency(item.price_usd) }}</p>
+        </div>
+      </div>
+      <div class="column has-text-centered">
+        <div>
+          <p><span class="heading">Change (24h)</p>
+
+          <p class="title"><span v-bind:class="{ 'coinChange positive': item.percent_change_24h >= 0 , 'coinChange negative': item.percent_change_24h < 0}">\{{ item.percent_change_24h }}%</span></p>
+        </div>
+      </div>
+      <div class="column has-text-centered">
+        <div>
+          <p class="heading">Volume (24h)</p>
+          <p class="">$\{{ formatCurrency(item['24h_volume_usd']) }}</p>
+        </div>
+      </div>
+      <div class="column has-text-centered">
+        <div>
+          <p class="heading">Total Supply</p>
+          <p class="">\{{ item.available_supply}} <span style="font-size:.8rem;">\{{ item.symbol }}</span></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

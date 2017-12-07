@@ -1,0 +1,110 @@
+@import '../../node_modules/bulma/css/bulma';
+@import 'partials/cryptofont';
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,800');
+
+body {
+  background: #f6f6f6;
+  font-family: "Open Sans", helvetica, arial, sans-serif;
+}
+
+.content h2 {
+  font-family: "Open Sans";
+  font-weight: 300;
+}
+
+#app .container.charts{
+  margin-bottom: 60px;
+}
+
+.this-row-1 {
+  text-align: center;
+}
+
+.positive, .negative {
+  margin: 20px 0;
+}
+
+.positive {
+  color: green;
+}
+
+.negative {
+  color: red;
+}
+
+#loadingBarContainer {
+  top: 0;
+  display:block;
+}
+
+.coinSymbol {
+  font-size: 32px;
+  height: 32px;
+  line-height:32px;
+  margin-bottom: 10px;
+}
+
+.coinPrice {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.columns.coinList {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 30px;
+
+  .tabs {
+    display: inline-block;
+    margin-bottom:5px;
+
+    a {
+      padding: 0;
+    }
+  }
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+.level{
+  .has-text-left {
+    justify-content: left;
+  }
+}
+
+.is-grouped.is-grouped-multiline {
+  justify-content: center;
+}
+
+.navbar {
+  margin-bottom: 30px;
+}
+
+.bd-tw-button {
+    background-color: #55acee;
+    color: white;
+    border-color: transparent !important;
+}
+
+.bd-tw-button:hover {
+    background-color: #49a6ed;
+    color: white;
+}
+
+footer, .footer {
+  background:#ffffff;
+  text-align: center;
+}
+
+a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover, a.navbar-link.is-active {
+  background: transparent;
+  color: #00d1b2;
+}
+
+@media screen and (max-width: 768px) {
+  .chartList .is-2 {
+    text-align: center !important;
+  }
+}

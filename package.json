@@ -1,0 +1,35 @@
+{
+  "name": "blkchrt",
+  "version": "0.1.0",
+  "description": "Cryptocurrency Exchange Charts",
+  "main": "index.js",
+  "author": "Ian Fajardo <ianfajardozx@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.18.13",
+    "bulma": "^0.6.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "concurrently": "^3.5.1",
+    "css-loader": "^0.28.7",
+    "defiant": "^1.4.5",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "node-sass": "^4.7.2",
+    "numeral": "^2.0.6",
+    "progressbar.js": "^1.0.1",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
+    "uglifyjs-webpack-plugin": "^1.1.2",
+    "vue": "^2.5.9",
+    "webpack": "^3.10.0"
+  },
+  "scripts": {
+    "test": "webpack",
+    "start": "concurrently \"node index.js\" \"webpack\" \"node-sass -w src/css -o public/css/ --output-style compressed\" \"browser-sync start --proxy 'localhost:5000' --files 'public' 'views'\" "
+  }
+}
