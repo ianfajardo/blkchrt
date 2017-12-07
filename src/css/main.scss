@@ -1,7 +1,8 @@
-@import '../../node_modules/bulma/css/bulma';
-@import 'partials/cryptofont';
-
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,800');
+@import 'partials/cryptofont';
+@import '../../node_modules/bulma/css/bulma';
+
+
 
 body {
   background: #f6f6f6;
@@ -101,6 +102,23 @@ footer, .footer {
 a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover, a.navbar-link.is-active {
   background: transparent;
   color: #00d1b2;
+}
+
+.donate {
+  background: #333333;
+  color: #ffffff;
+  padding: 70px 0;
+
+  .coinAddr {
+    padding: 15px;
+    background: #222222;
+  }
+
+  h1 {
+    color: #ffffff;
+    font-weight: 800;
+    margin-bottom: 50px;
+  }
 }
 
 @media screen and (max-width: 768px) {
