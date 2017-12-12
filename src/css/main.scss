@@ -92,7 +92,7 @@ body {
     border-color: transparent !important;
 }
 
-.bd-tw-button:hover {
+.bd-tw-button:hover, .bd-tw-button:focus, .bd-tw-button:visited {
     background-color: #49a6ed;
     color: white;
 }
@@ -104,6 +104,10 @@ body {
 footer, .footer {
   background:#ffffff;
   text-align: center;
+}
+
+.navbar-burger.button {
+  border-color: transparent;
 }
 
 a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover, a.navbar-link.is-active {

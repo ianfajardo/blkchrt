@@ -55,6 +55,11 @@ const extractSass = new ExtractTextPlugin({
      plugins: [
        extractSass,
        new CleanWebpackPlugin(['public']),
+       new webpack.DefinePlugin({
+          'process.env': {
+            NODE_ENV: '"production"'
+          }
+        })
        //new UglifyJSPlugin()
      ]
    }
