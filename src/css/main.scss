@@ -140,3 +140,19 @@ a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover, a.navbar-link
     font-size: .8rem;
   }
 }
+
+.navbar-brand {
+  color: #00d1b2;
+  i {
+    color: #00d1b2;
+  }
+  .navbar-title {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    margin-left: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #00d1b2;
+  }
+}
+
