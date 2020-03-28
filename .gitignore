@@ -25,3 +25,8 @@ coverage
 
 # Benchmarking
 benchmarks/graphs
+
+# Local Netlify folder
+.netlify
+
+*.env

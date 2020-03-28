@@ -13,32 +13,14 @@ var app = new Vue({
   },
   methods: {
     refreshData: function () {
-      var bar = new ProgressBar.Line("#loadingBar", {
-        easing: 'easeInOut',
-        duration: 1400,
-        color: '#FFEA82',
-        from: {color: '#FFEA82'},
-        to: {color: '#ED6A5A'},
-        step: (state, bar) => {
-          bar.path.setAttribute('stroke', state.color);
-        }
-      });
-
-      function barAnimate(){
-        bar.animate(1.0);
-      }
 
       var v = this;
-      axios.get('https://api.coinmarketcap.com/v1/ticker/')
+      axios.get('/.netlify/functions/getPrice')
         .then(function (response) {
-          console.log(response.data);
-          v.items = response.data;
-
-          barAnimate();
-          console.log(v.loaded);
-          console.log(v);
-          v.loaded = true;
-          v.loading = false;
+          console.log("===== data =====");
+          console.log(response.data.data);
+          v.items = response.data.data;
+          console.log("===== data =====");
         })
         .catch(function (error) {
           console.log(error);
@@ -50,6 +32,15 @@ var app = new Vue({
         return numeral(num).format('0[.]00000');
       }
       return numeral(num).format('0,0.00');
+    },
+    formatSupply: function(num){
+      if(parseFloat(num) < 5){
+        return numeral(num).format('0[.]00000');
+      }
+      return numeral(num).format('0,0');
+    },
+    formatPercent: function(num){
+      return numeral(num).format('0[.]0000');
     }
   }
 });

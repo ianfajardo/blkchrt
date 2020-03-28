@@ -7,6 +7,10 @@ body {
   font-family: "Open Sans", helvetica, arial, sans-serif;
 }
 
+[v-cloak] {
+  display: none;
+}
+
 .content h2 {
   font-family: "Open Sans";
   font-weight: 300;
@@ -132,19 +136,15 @@ a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover, a.navbar-link
   }
 }
 
-@media screen and (max-width: 768px) {
-  .chartList .is-2 {
-    text-align: center !important;
-  }
-  .donate .coinAddr {
-    font-size: .8rem;
-  }
+.card img {
+  max-width: 22px;
 }
 
 .navbar-brand {
   color: #00d1b2;
   i {
     color: #00d1b2;
+    padding-left: 10px;
   }
   .navbar-title {
     font-family: "Open Sans", Arial, Helvetica, sans-serif;
@@ -155,4 +155,15 @@ a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover, a.navbar-link
     color: #00d1b2;
   }
 }
+
+
+@media screen and (max-width: 768px) {
+  .chartList .is-2 {
+    text-align: center !important;
+  }
+  .donate .coinAddr {
+    font-size: .8rem;
+  }
+}
+
 
