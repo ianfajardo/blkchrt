@@ -43,9 +43,10 @@
     <div id="app" v-cloak>
       <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="container">
-          <div class="navbar-brand ">
+          <div class="navbar-brand">
             <a class="navbar-item is-paddingless" href="/">
-              <i class="fas fa-cube"></i> <div class="navbar-title">BLKCHRT</div>
+              <i class="fas fa-cube"></i>
+              <div class="navbar-title">BLKCHRT</div>
             </a>
             <button class="button navbar-burger" data-target="navMenu">
               <span></span>
@@ -56,12 +57,8 @@
 
           <div class="navbar-menu" id="navMenu">
             <div class="navbar-start">
-              <a class="navbar-item" href="/">
-                Chart
-              </a>
-              <a class="navbar-item" href="/list">
-                List
-              </a>
+              <a class="navbar-item" href="/"> Chart </a>
+              <a class="navbar-item" href="/list"> List </a>
               <a
                 class="navbar-item"
                 href="https://www.coindesk.com/information/"
@@ -85,9 +82,7 @@
                       <span class="icon">
                         <i class="fab fa-twitter"></i>
                       </span>
-                      <span>
-                        Tweet
-                      </span>
+                      <span> Tweet </span>
                     </a>
                   </p>
                   <p class="control">
@@ -99,9 +94,7 @@
                       <span class="icon">
                         <i class="fab fa-github-alt"></i>
                       </span>
-                      <span>
-                        Github
-                      </span>
+                      <span> Github </span>
                     </a>
                   </p>
                 </div>
@@ -110,6 +103,23 @@
           </div>
         </div>
       </nav>
+
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+      ></script>
+      <!-- ad-top -->
+      <ins
+        class="adsbygoogle"
+        style="display: block"
+        data-ad-client="ca-pub-7303268260949065"
+        data-ad-slot="3488331055"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
 
       <div class="container charts">
         <div class="this-row-1" v-for="i in Math.ceil(items.length / 3)">
@@ -122,7 +132,10 @@
                 <div class="card-content">
                   <div class="content">
                     <h2>
-                      <img v-bind:src="'https://s2.coinmarketcap.com/static/img/coins/64x64/' + item.id + '.png'" alt="">
+                      <img
+                        v-bind:src="'https://s2.coinmarketcap.com/static/img/coins/64x64/' + item.id + '.png'"
+                        alt=""
+                      />
                       {{item.name}}
                     </h2>
 
@@ -137,30 +150,36 @@
                       <div class="control">
                         <div class="tags has-addons">
                           <div class="tag is-dark">24h</div>
-                          <div class="tag coinChange"
+                          <div
+                            class="tag coinChange"
                             v-bind:class="(item.quote.USD.percent_change_24h >= 0) ? 'is-success' : 'is-danger'"
                           >
-                            {{ formatPercent(item.quote.USD.percent_change_24h) }}%
+                            {{ formatPercent(item.quote.USD.percent_change_24h)
+                            }}%
                           </div>
                         </div>
                       </div>
                       <div class="control">
                         <div class="tags has-addons">
                           <div class="tag is-dark">7d</div>
-                          <div class="tag coinChange"
+                          <div
+                            class="tag coinChange"
                             v-bind:class="(item.quote.USD.percent_change_7d >= 0) ? 'is-success' : 'is-danger'"
                           >
-                            {{ formatPercent(item.quote.USD.percent_change_7d) }}%
+                            {{ formatPercent(item.quote.USD.percent_change_7d)
+                            }}%
                           </div>
                         </div>
                       </div>
                       <div class="control">
                         <div class="tags has-addons">
                           <div class="tag is-dark">1h</div>
-                          <div class="tag coinChange"
-                          v-bind:class="(item.quote.USD.percent_change_1h >= 0) ? 'is-success' : 'is-danger'"
+                          <div
+                            class="tag coinChange"
+                            v-bind:class="(item.quote.USD.percent_change_1h >= 0) ? 'is-success' : 'is-danger'"
                           >
-                            {{ formatPercent(item.quote.USD.percent_change_1h) }}%
+                            {{ formatPercent(item.quote.USD.percent_change_1h)
+                            }}%
                           </div>
                         </div>
                       </div>
@@ -169,14 +188,14 @@
                     <hr />
                     <div class="columns">
                       <div class="column">
-                        <p class="heading has-text-grey	">Volume (24h)</p>
+                        <p class="heading has-text-grey">Volume (24h)</p>
                         <p>${{ formatCurrency(item.quote.USD.volume_24h) }}</p>
                       </div>
                       <div class="column">
-                        <p class="heading has-text-grey	">Total Supply</p>
+                        <p class="heading has-text-grey">Total Supply</p>
                         <p>
                           {{ formatCurrency(item.total_supply)}}
-                          <span style="font-size:.8rem;"
+                          <span style="font-size: 0.8rem"
                             >{{ item.symbol }}</span
                           >
                         </p>
@@ -199,7 +218,7 @@
       <!-- ad1 -->
       <ins
         class="adsbygoogle"
-        style="display:block"
+        style="display: block"
         data-ad-client="ca-pub-7303268260949065"
         data-ad-slot="5317606258"
         data-ad-format="auto"
